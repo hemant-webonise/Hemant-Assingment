@@ -1,0 +1,8 @@
+
+public class Restorants {
+	int RestorantId;
+	int Price;
+	String Food;
+	
+
+}

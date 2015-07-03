@@ -1,0 +1,38 @@
+
+public class Restorants {
+	public Restorants(int restorantId, int price, String food) {
+		super();
+		RestorantId = restorantId;
+		Price = price;
+		Food = food;
+	}
+	int RestorantId;
+	Double Price;
+	String Food;
+	
+	@Override
+	public String toString() {
+		return "Restorants [RestorantId=" + RestorantId + ", Price=" + Price
+				+ ", Food=" + Food + "]";
+	}
+	public int getRestorantId() {
+		return RestorantId;
+	}
+	public void setRestorantId(int restorantId) {
+		RestorantId = restorantId;
+	}
+	public Double getPrice() {
+		return Price;
+	}
+	public void setPrice(Double price) {
+		Price = price;
+	}
+	public String getFood() {
+		return Food;
+	}
+	public void setFood(String food) {
+		Food = food;
+	}
+	
+
+}
