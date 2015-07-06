@@ -1,0 +1,27 @@
+
+public class Restorants {
+	int RestorantId;
+	int Price;
+	String Food;
+	
+	public int getRestorantId() {
+		return RestorantId;
+	}
+	public void setRestorantId(int restorantId) {
+		RestorantId = restorantId;
+	}
+	public int getPrice() {
+		return Price;
+	}
+	public void setPrice(int price) {
+		Price = price;
+	}
+	public String getFood() {
+		return Food;
+	}
+	public void setFood(String food) {
+		Food = food;
+	}
+	
+
+}

@@ -1,0 +1,135 @@
+package MenuShow;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MenuFilePuller {
+
+   /* public void Display(Map<Integer, Map<String, Double>> outMap){
+    	
+    	Map<String, Double> innerMap = new HashMap<String, Double>(); 
+    	
+    	System.out.println("In Display\n"+outMap);
+    	
+    	
+    	
+    	
+    	
+    	
+    }*/
+    
+    
+   public void display(Map<Integer, Map<String, Double>> outerMap)
+	{
+		Map<String, Double> innerMap = new HashMap<String, Double>();
+		
+		System.out.println("In Display\n"+outerMap);
+		
+		/*for(Integer key:outerMap.keySet())
+		{
+			
+			innerMap = outerMap.get(key);
+			System.out.print(" Restaurant ID : "+key+"\n");
+			
+			for(String food:innerMap.keySet())
+			{
+				System.out.println(food+" "+innerMap.get(food));
+			}
+			innerMap.clear();
+			System.out.println();
+		}*/
+		
+	}/*
+	
+	public void display(Map<Integer, Map<String, Double>> outerMap)
+	{
+		Map<String, Double> innerMap = new HashMap<String, Double>();
+		
+		for(Integer key:outerMap.keySet())
+		{
+			
+			innerMap = outerMap.get(key);
+			System.out.print(" Restaurant ID : "+key+"\n");
+			
+			for(String item:innerMap.keySet())
+			{
+				System.out.println(item+" "+innerMap.get(item));
+			}
+			innerMap.clear();
+			System.out.println();
+			
+		}
+		System.out.println("In Display\n"+outerMap);
+		
+	}*/
+    
+
+	public void Pull(){
+
+		/*Creating Maps
+		 * */
+
+		Map<Integer, Map<String, Double>> outerMap = new HashMap<Integer, Map<String, Double>>();
+		Map<String, Double> innerMap = new HashMap<String, Double>();
+
+
+		BufferedReader reader = null;
+		try {
+			reader = new BufferedReader(new FileReader("sample_data.csv"));
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		String line;
+
+		try {
+			while((line=reader.readLine())!=null)
+			{
+				String [] Column =line.split(",", 3);
+
+
+				/*index 0 is RetorantID, index 1 is Prices, 
+				 * index 2 is Food for the price*/
+				System.out.println(Column[2]);
+				/*
+				 * Prints out any one column considering the last one as only one Column\
+				 *  */
+				
+				innerMap.clear();	
+				if(outerMap.isEmpty()) {
+					innerMap.put(Column[2],Double.parseDouble(Column[1]));
+					outerMap.put(Integer.parseInt(Column[0]), innerMap);
+
+				}
+				else{
+					if(outerMap.containsKey(Integer.parseInt(Column[0]))){
+						innerMap=outerMap.get(Integer.parseInt(Column[0]));
+						innerMap.put(Column[2],Double.parseDouble(Column[1]));
+						outerMap.put(Integer.parseInt(Column[0]), innerMap);
+
+					}
+					else{
+						innerMap.put(Column[2],Double.parseDouble(Column[1]));
+						outerMap.put(Integer.parseInt(Column[0]), innerMap);
+					}
+				}
+				
+				
+			}
+			display(outerMap);
+
+		} catch (IOException fileNotFException) {
+			// TODO Auto-generated catch block
+			System.out.println("File not Found on the expected loaction./n :(");
+			fileNotFException.printStackTrace();
+		}
+	}
+
+
+
+}

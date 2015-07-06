@@ -1,0 +1,81 @@
+ import java.io.BufferedReader;
+import java.io.FileReader;
+import java.lang.reflect.Array;
+import java.util.StringTokenizer;
+ 
+@SuppressWarnings("null")
+public class MenuReader {
+	{	
+
+    try { 
+			
+      String csvFile = "/home/webonise/sample_data.csv";
+
+      //create BufferedReader to read csv file
+      BufferedReader br = new BufferedReader(new FileReader(csvFile));
+      String line = "";
+      StringTokenizer st = null;
+      String data[][] = new String[20][10];      
+    
+      
+
+      int lineNumber = 0; 
+      int tokenNumber = 0;
+
+      //read comma separated file line by line
+      while ((line = br.readLine()) != null) 
+      {
+
+
+        //use comma as token separator
+        st = new StringTokenizer(line, ",");
+            
+        while (st.hasMoreTokens()) {        	
+        
+          String takeLine = st.nextToken();
+          //display csv values
+          //System.out.print(takeLine + "  ");
+          data[lineNumber][tokenNumber]= takeLine; 
+          tokenNumber++;
+        }
+       // 
+        lineNumber++;
+        //System.out.println();
+        //reset token number
+        tokenNumber = 0;
+        
+    System.out.println("From Array");
+        for (int i = 0; i < lineNumber; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(data[i][j] + " ");
+            }
+            System.out.print("\n");
+        }    
+          
+        
+        
+        
+        
+        
+      }
+
+    } catch (Exception FileNotFoundException) {
+    	FileNotFoundException.printStackTrace();
+      // log this information at which line comes
+      //System.out.println(FileNotFoundException.getStackTrace());
+      System.err.println("CSV file cannot be read : As the file is not present" +
+      		"on \n/home/webonise/sample_data.csv \n ");
+    }
+    
+}
+	public static void printRow(int[] row) {
+        for (int i : row) {
+            System.out.print(i);
+            System.out.print("\t");
+        }
+        System.out.println();
+    }}
+
+	
+
+

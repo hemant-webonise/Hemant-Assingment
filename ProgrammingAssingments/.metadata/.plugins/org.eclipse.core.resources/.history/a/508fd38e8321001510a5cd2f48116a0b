@@ -1,0 +1,40 @@
+package MenuShow;
+
+import java.util.Arrays;
+
+public class Restorants {
+	int RetorantId;
+	Double Price;
+	String [] Food;
+	public int getRetorantId() {
+		return RetorantId;
+	}
+	public void setRetorantId(int retorantId) {
+		RetorantId = retorantId;
+	}
+	public Double getPrice() {
+		return Price;
+	}
+	public void setPrice(Double price) {
+		Price = price;
+	}
+	public String[] getFood() {
+		return Food;
+	}
+	public void setFood(String[] food) {
+		Food = food;
+	}
+	@Override
+	public String toString() {
+		return "Restorants [RetorantId=" + RetorantId + ", Price=" + Price
+				+ ", Food=" + Arrays.toString(Food) + "]";
+	}
+	public Restorants(int retorantId, Double price, String[] food) {
+		super();
+		RetorantId = retorantId;
+		Price = price;
+		Food = food;
+	}
+	
+
+}
