@@ -4,7 +4,7 @@
   * { 
     margin: 0;
     padding: 0;
-    color : gray;
+    
 
   }
   footer, section, header, aside, figure {
@@ -19,10 +19,9 @@
   }
   form {
     height: 22px;
- 
     width: 280px;
     background: #333;
-    color: #fff;
+    color: black;
     border-radius: 5px;
     padding: 5px 10px;
     margin: 10px 10px;
