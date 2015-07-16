@@ -26,8 +26,7 @@ Approach :
 
 We have User and User's Profile, so these are related entities so we can put User's Profile in User's Document. 
 
-User
-{
+User{
 	_id : Object_Id()
 	username : "String" - login info
 	password : "String" - login info
@@ -48,11 +47,11 @@ User
 					        State : "String"
 					        Country : "String"						
 			      }
-				Permanant_address:{
-                                                Street : "String"
-						City : "String"
-						State : "String"
-						Country : "String"
+			       Permanant_address:{
+					        Street : "String"
+					        City : "String"
+					        State : "String"
+					        Country : "String"
 			      }]
 		    Phone : [Array of phone-numbers in CSV]
 		   }
@@ -64,13 +63,13 @@ We have Roles, Pages, Blogs which are not dependent on each other so we can keep
 
 Creates a document for Role specified to users 
 
-Role={
+Role{
 	id : "String"
      }
 
 Creates a document for permissions specific to roles for the user.The liked key used is simply going to tell if anyone liked the comment and will not give you who liked and how many people liked.
 
-Permission={
+Permission{
 	id : "String"
         read : Boolean
         update : Boolean 
@@ -81,7 +80,7 @@ Permission={
 
 Creates a document for a page 
 
-Page={
+Page{
 	_id : Object_id()
 	title : "String"
 	slug : "String"
@@ -94,7 +93,7 @@ Page={
 
 Creates a document for blog
 
-Blog={
+Blog{
 	_id : Object_id()
 	title : "String"
 	slug : "String"
