@@ -34,7 +34,7 @@ User
 
 	Role_id : "String"  - will be taken from ROLES;
 
-	Permission_id : [Array storing  integer values of different permissions granted to the user] -  will be taken from PERMISSION;
+	Permission_id : [Array storing  string values of different permissions granted to the user] -  will be taken from PERMISSION;
 	
  	timestamps : "String"
 	
@@ -72,10 +72,7 @@ Creates a document for permissions specific to roles for the user.The liked key 
 
 Permission={
 	id : "String"
-        read : Boolean
-        update : Boolean 
-        delete : Boolean
-     }
+      }
 
 
 
