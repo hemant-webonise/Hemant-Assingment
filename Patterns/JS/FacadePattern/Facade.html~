@@ -1,0 +1,20 @@
+<script type="text/javascript" src="Facade.js"></script>
+
+<header> Facade : Provide a unified interface to a set of interfaces in a subsystem. Façade defines a higher-level interface that makes the subsystem easier to use. </header>
+
+<code>
+<body>
+ The objects participating in this pattern are:
+
+   <h3>  Facade </h3>In sample code: Mortgage
+        knows which subsystems are responsible for a request
+        delegates client requests to appropriate subsystem objects
+    <h3>Sub Systems</h3>In sample code: Bank, Credit, Background
+        implements and performs specialized subsystem functionality
+        have no knowledge of or reference to the facade
+
+
+   
+</body>
+</code>
+<a class="btn btn-brown" href="javascript:void(0);" onclick="run();return false">Run</a>

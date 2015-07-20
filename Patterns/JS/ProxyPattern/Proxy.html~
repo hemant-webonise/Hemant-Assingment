@@ -1,0 +1,18 @@
+<script type="text/javascript" src="Proxy.js"></script>
+
+<h4> Proxy - The Proxy pattern provides a surrogate or placeholder object for another object and controls access to this other object.</h4>
+
+<code>The objects participating in this pattern are:
+<body>
+    <h3>Client </h3> In sample code: the run() function
+        calls Proxy to request an operation
+    <h3>Proxy </h3>In sample code: GeoProxy
+        provides an interface similar to the real object
+        maintains a reference that lets the proxy access the real object
+        handles requests and forwards these to the real object
+    <h3>RealSubject </h3>In sample code: GeoCoder
+        defines the real object for which service is requested
+    <h1>-</h1>
+</body>
+</code>
+<a class="btn btn-brown" href="javascript:void(0);" onclick="run();return false">Run</a>
