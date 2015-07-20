@@ -8,6 +8,34 @@
 	                 todo2 : document.querySelector('#todolist2'),todo3 : document.querySelector('#todolist3')
                         };
         
+        /*Class for Storage*/
+        var MyStorage = function(){
+	this.storestate = function() {
+		localStorage.todolist = todoMaker.todo.innerHTML;
+		localStorage.todolist2 = todoMaker.todo2.innerHTML;
+		localStorage.todolist3 = todoMaker.todo3.innerHTML;
+	}
+	;
+	
+
+	this.retrievestate = function() {
+		if (localStorage.todolist) {
+			todoMaker.todo.innerHTML = localStorage.todolist;
+			todoMaker.todo2.innerHTML = localStorage.todolist2;
+			todoMaker.todo3.innerHTML = localStorage.todolist3;
+			}
+	}
+	;
+
+        this.storestateCompleted = function(temp) {
+		todolist3.innerHTML  += '<li>' + temp + '</li> ';	
+	}
+	;
+        };
+
+
+	myStorage = new MyStorage();
+        
         /*
         TRIED MAKING IT MORE OBJECT ORIENTED 
 
@@ -75,8 +103,8 @@
 			todoMaker.todo2.innerHTML += '<li>' + a + '</li> ' ;
 			field.value = '';
 			field.focus();
-			storestate();
-			ev.preventDefault();
+			myStorage.storestate();
+			ev.myStorage.preventDefault();
 		}, false);
 
 	
@@ -85,12 +113,12 @@
 		if (t.tagName === 'LI') {
 			if (t.classList.contains('done')) {
 				temp= t.innerHTML;
-				storestateCompleted(temp);	
+				myStorage.storestateCompleted(temp);	
 				t.parentNode.removeChild(t);				
 			} else {
 				t.classList.add('done');
 			}
-			storestate();
+			myStorage.storestate();
 			todoMaker.todo1.innerHTML = '<li>' + localStorage.todolist; + '</li>';
 		}
 		;
@@ -99,7 +127,7 @@
     
 
 
-    todoMaker.todo3.addEventListener('click', function(ev) {
+        todoMaker.todo3.addEventListener('click', function(ev) {
 		var t = ev.target;
 		if (t.tagName === 'LI') {
 			if (t.classList.contains('done')) {
@@ -110,7 +138,7 @@
 			} else {
 				t.classList.add('done');
 			}
-			storestate();
+			myStorage.storestate();
 			}
 		;
 		ev.preventDefault();
@@ -118,29 +146,9 @@
 
 	
 
-	document.addEventListener('DOMContentLoaded', retrievestate, false);
+	document.addEventListener('DOMContentLoaded', myStorage.retrievestate, false);
 
-	function storestate() {
-		localStorage.todolist = todoMaker.todo.innerHTML;
-		localStorage.todolist2 = todoMaker.todo2.innerHTML;
-		localStorage.todolist3 = todoMaker.todo3.innerHTML;
-	}
-	;
 	
-
-	function retrievestate() {
-		if (localStorage.todolist) {
-			todoMaker.todo.innerHTML = localStorage.todolist;
-			todoMaker.todo2.innerHTML = localStorage.todolist2;
-			todoMaker.todo3.innerHTML = localStorage.todolist3;
-			}
-	}
-	;
-
-        function storestateCompleted(temp) {
-		todolist3.innerHTML  += '<li>' + temp + '</li> ';	
-	}
-	;
 
 
 })();
