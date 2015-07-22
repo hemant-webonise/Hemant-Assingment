@@ -15,4 +15,16 @@ describe("Testing Two Numbers", function() {
     it("Compare Numbers to be Less Than", function() {
     	expect(b).toBeLessThan(a);
     });
+    /*THE CODE TO CHECK THAT THE FUNCTIONS ARE DIFINED */
+    it("Check for MultiplyTwoNumbers definations", function() {    
+
+    expect(MultiplyTwoNumbers(a,b)).toBeDefined() 
+    
+    });
+    it("Check for AddTwoNumbers definations", function() {    
+
+    expect(AddTwoNumbers(a,b)).toBeDefined() 
+    
+    });
+   
 });
