@@ -1,0 +1,176 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+header 
+{
+	height: 55px;
+}
+
+a{
+	outline: 0;
+	text-decoration: none;
+}
+ul{
+	list-style-type: none;
+}
+
+.content1 .container ul li img{
+    position:relative;
+    margin-left: 177px;
+    bottom: 8px;}
+
+.content1 .container ul li a {
+	position:absolute;
+}
+
+header li a , .content1 ul li {
+	display: inline;
+	float: left;
+	padding: 20px 20px 0px 0px;	
+	text-decoration: none;
+	font-size: 16px;
+	color: #000;
+	outline: 0;
+	text-decoration: none;
+}
+
+h1
+{
+	position: absolute;
+	font-size: 44px;
+	color: #FFFFFF;
+	top: 490px;
+	left: 375px;
+	font-family: Arial;
+	
+}
+
+h2{ 
+	position:relative;
+	font-size: 22px;
+	color: #222222;
+	text-align: center;
+	top: 20px;
+
+}
+h4{ 
+	font-size: 11px;
+}
+
+h5{
+	font-size: 18px;
+}
+.happening h3 {
+padding-top: 60px;
+color: #888888;
+font-size: 40px;
+}
+
+.lower{
+	background-color: #4466ff;
+	color: white;
+	padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+p
+{
+	position: absolute;
+	font-size: 22px;
+	color: #FFFFFF;
+	top: 550px;
+	left: 375px;
+	font-weight: lighter;
+}
+
+.container 
+{   margin: 0 auto;
+	width: 940px;	
+}
+
+.content2 .container{
+	width: 940px;	
+} 
+
+
+.logo
+{
+	float: left;
+	font-size: 36px;
+	text-align: center;
+	background-color: #ff8000;
+	width: 135px;
+	height: 55px;
+}
+
+
+
+.banner
+{
+	width: auto;
+	background-color: #000000;
+}
+
+
+
+.content1
+{
+	background-color: #ecab1f;
+	height: 200px;
+}
+
+.content1 .rcorners 
+{
+    border-radius: 15px;
+    background: #FFFFFF;
+    width: 220px;
+    height: 60px;
+}
+.content1 .last{
+	padding-right:0px;
+}
+
+.images-list, .images-list p, .images-list h3 {
+list-style: none;
+margin:0; padding:0;
+
+}
+/* > located directly inside the div,
+hence a parent-child relationship
+is established between both elements.
+and not select the innner elements*/
+.images-list > li{
+  /*padding : 1em 5em;*/
+  float:left;
+  margin-right: 20px; 
+  width: 130px;
+}
+
+
+
+.images-list > li > .image{
+  display:block;
+  float:left;
+  margin-right:10px;
+
+}
+
+.images-list .remove_left{
+	padding-left: 0px;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.content2 li {
+	padding-left: 0px;
+	margin-right: 188px;
+}
+
+.content2 .right{
+	margin: 0px;
+}
