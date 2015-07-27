@@ -67,8 +67,8 @@ h1
 	position: absolute;
 	font-size: 44px;
 	color: #FFFFFF;
-	top: 490px;
-	left: 375px;
+	top: 366px;
+    left: 478px;
 	font-family: Arial;
 	
 }
@@ -106,8 +106,10 @@ p
 	position: absolute;
 	font-size: 22px;
 	color: #FFFFFF;
-	top: 550px;
-	left: 375px;
+	
+    top: 442px;
+
+    left: 478px;
 	font-weight: lighter;
 }
 
@@ -139,6 +141,9 @@ p
 	background-color: #000000;
 }
 
+.banner img{
+	width: 940px;
+}
 
 
 .content1
