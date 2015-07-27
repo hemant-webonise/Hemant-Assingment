@@ -1,132 +1,144 @@
-body{
-    /*Reset body padding and margins*/
-    margin:0px;
-    padding:0px;
+body, html,h3 {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-h2{
-    color:#444444;
-    text-align: center;
-    font-size: 36px;    
-    margin-top: 60px;
-    margin-bottom: 70px;
-    font-family: sans-serif;
+header{
+	background-color: #000;
+
+}
+ .logo h3{
+	text-align: center;
+	padding-top: 5px;
+}
+.container{
+	width: 940px;
+	margin: 0px auto;
+}
+.container .logo{
+	float: left;
+	background-color: #ff8000;
+	width: 140px;
+	height: 35px;
+	margin-right: 100px;
+	margin-top: 8px;
 }
 
+.container ul{
 
+	padding: 0px;
+}
 
-ul {    
-    list-style-type: none;    
-    text-decoration:none;
+.container li{
+	padding-top: 15px;
+	float: left;
+	margin-right: 50px;
+}
+
+header a{
+	color: #aaaaaa;
+	text-decoration: none;
+	font-size: 18px;
+  	font-family: sans-serif;
+  	font-weight: bold;
+}
+
+.clear{
+	clear: both;
+	float: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.banner{
+	background-color:#71c4ea;
+	height: 485; 
+	margin-bottom: 64px;
+}
+
+.maincontent{
+	text-align: center;
+}
+
+.maincontent h1{
+	font-size: 36px;
+  	font-family: sans-serif;
+    color: #444444;
+  	margin-bottom: 70px;  	
     margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-li {
-    float: left;
-    padding: 1em 1em;
-}
-a{  text-decoration: none;
-  color: #aaaaaa;}
-
-.upC{
-    color: #aaaaaa; 
-    padding : 0px 30px;
-}
-
-.footerC{
-    clear: left;
-    color: #FF8000;
-    margin: 0 auto;
-    width:  940px;
-    margin-left: 100px;
 }
 
 
-a:hover   {
-    color:#444444; 
-    background-color:transparent; 
-    text-decoration:none}
-
-
-
-.container {
-
-
+.maincontent li{
+	float: left;
+	width: 174px;
+	margin-right: 75px;
 }
 
-.up {
-    margin: 0px auto;
-    width:  940px;   
-    height: 50px;
-    
-
+.maincontent .last{
+	width: 174px;
+	margin-right: 0px;
 }
 
-.middle {
-    background-color: #71c4ea;
-    height: 485px;
-    padding: 0 280px;	
-
-}
-
-
-
- .circle{
+.maincontent .circle {
  	width: 140px;
    	height: 140px;
    	background: #efefef; 
-  	padding:0px;
 	border-radius: 50%;
-	margin-right: 75px;
-	display: block;
-}
-
-
-
-
-h1{
-	color: #444444;
-	font-size: 36px;
-	margin-top: 64px;
-	margin-bottom:70px;
-	text-align: center;
-
-}
-
-.text_below_circle a {
-	width: 140px;
-	text-align: justify;
-	font-size: 18px;
-	color:#888888;
-	font-family: sans-serif;
-	margin-top: 20px;
-        display: block; 
-        margin-right: 43px;
-        margin-bottom: 110px;
-}
-
-.logo {
-    height: 35px;
-    width: 140px;
-    background-color: #ff8000;
+    color: #888888;
+  	font-size: 18px;
+    margin-bottom: 30px;
     float: left;
-    margin-top: 8px;
-    text-align: center;
-    font-size: 30px;
-}
-
-.inContainer {
-    background-color: black;
+    margin-left: 20px;
 
 }
+
+
+.maincontent a{
+	color: #888888;
+  	text-decoration: none;
+  	font-size: 18px;
+  	font-family: sans-serif;
+  	font-weight: bold;
+}
+
+.maincontent a:hover {
+    color:#000; 
+    text-decoration:none;
+ }
+
 
 footer{
-
-    background-color: #ECECEC;    
-    height: 42px;
-    margin-bottom: 0px;
-    clear: left;   
-    padding-left: 200px;
+	background-color: #ececec;
+  	height: 50px;
+  	width: 100%;
+    margin-top: 110px;
 }
 
+footer ul{
+    margin-left: 170px;
+}
+
+footer li{
+	margin-right: 100px;
+}
+
+footer a{
+	color: #ff8000;
+	font-size: 16px;
+	text-decoration: none;
+
+}
+
+footer a:hover{
+	color:#444444; 
+    text-decoration:none;
+}
+
+footer ul li {
+	padding-top: 10px;
+}
+.first a{
+	color: black; 
+}
