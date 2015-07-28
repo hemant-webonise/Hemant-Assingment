@@ -96,7 +96,12 @@ h1
 	top: 435px;
 	font-family: Arial;	
 }
-
+header ul {
+	float: left;
+}
+header li{
+	float: left;
+}
 h4
 {
 	position: absolute;
@@ -121,8 +126,18 @@ h2
 	color: #888888;
 	font-size: 40px;
 }
-
-
+span{
+	float: left;
+	font-size: 22px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.content1 a{
+	color: #222222;
+	width: 220px;
+    height: 60px;
+    display: block;
+}
 
 .content1
 {
@@ -138,22 +153,23 @@ h2
     width: 220px;
     height: 60px;
 }
-.content1 ul li {
+.content1 li {
 	float: left;
 	margin-right: 20px;	
 	text-decoration: none;
 	font-size: 16px;
 	color: #000;
 	outline: 0;
+	border-radius: 10px;
+    background: #FFFFFF;
+    
 	
 }
 .content1 .nomargin{
 	margin-right: 0px;
 }
 
-.content1 ul li a{
-	color: #222222;
-}
+
 
 .box-image{
 	float: right;
@@ -170,12 +186,7 @@ img{
 	display: block;
 }
 
-span{
-	float: left;
-	font-size: 22px;
-	padding-top: 20px;
-	padding-left: 20px;
-}
+
 .images-list li {
 	float: left;
 	display: block;
