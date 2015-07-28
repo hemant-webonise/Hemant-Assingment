@@ -6,6 +6,9 @@ header
 {
 	height: 55px;
 }
+header a{
+	color: black;
+}
 
 .container 
 {
@@ -33,10 +36,9 @@ ul{
 }
 
 .h-list li a{
-	display: inline;
+   /* When we use display inline never use float : left they are the same*/
 	float: left;
-	padding-top: 20px;
-	padding-left: 30px;	
+	padding: 20px 0 0 30px;
 	text-decoration: none;
 	font-size: 16px;
 	color: #000;
@@ -47,7 +49,7 @@ ul{
 form{
 	float: right;
 	border: solid;
-	border-radius: 15px;
+	border-radius: 10px;
 	border-width: 1px;
 	margin-top: 5px;
 }
@@ -61,6 +63,8 @@ form{
 	margin-left: 10px
 }
 
+
+
 .icon {
 
 	width: 35px;
@@ -70,15 +74,18 @@ form{
 }
 
 .banner
-{
+{   height: 544px;
 	width: auto;
-	background-color: #000000;
+	
+	background: url("../images/banner.jpg" ) no-repeat center ;	
 	background-position: center top;
+	background-color: black;
 }
 
 .banner-img
 {
 	width: 940px;
+
 }
 
 h1
@@ -115,9 +122,7 @@ h2
 	font-size: 40px;
 }
 
-header a{
-	color: black;
-}
+
 
 .content1
 {
@@ -126,22 +131,21 @@ header a{
 	padding: 20px 0px;
 	margin-bottom: 60px;
 }
-.rcorners 
+.box 
 {
-    border-radius: 15px;
+    border-radius: 10px;
     background: #FFFFFF;
     width: 220px;
     height: 60px;
 }
 .content1 ul li {
-	display: block;
 	float: left;
 	margin-right: 20px;	
 	text-decoration: none;
 	font-size: 16px;
 	color: #000;
 	outline: 0;
-	text-decoration: none;
+	
 }
 .content1 .nomargin{
 	margin-right: 0px;
@@ -151,7 +155,7 @@ header a{
 	color: #222222;
 }
 
-.rcorners-img{
+.box-image{
 	float: right;
 	padding-top: 18px;
 	padding-right: 10px;
@@ -162,7 +166,11 @@ header a{
 	font-size: 40px;
 }
 
-p{
+img{
+	display: block;
+}
+
+span{
 	float: left;
 	font-size: 22px;
 	padding-top: 20px;

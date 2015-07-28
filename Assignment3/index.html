@@ -22,9 +22,8 @@
 		</div>
 	</header>	
 	
-	<div class="banner">
+	<div class="banner"> 
 		<div class="container">
-			<img class="banner-img" src="images/banner.jpg"></img>
 			<h1>Grand Weddings...</h1>
 			<h4>Our wedding support Team makes your special day perfect in every way imaginable...</h4>
 			<div class="clear"></div>
@@ -35,24 +34,26 @@
 	<div class = "content1" >
 		<div class="container">
 			<ul>
-		    	<li >
-					<a href="#"><div class="rcorners">
-					<p>Films & Fun</p><img class="rcorners-img" src="images/arrow.png"></img>
+				<!-- Applied two different Logic here, if box is used for to ul then the a tag will not be selectable for the whole block.
+				a is a inline element and div are block element, We are not suppose to use Block in Inline-->
+		    	<li class="box">
+					<a href="#">
+					<span>Films & Fun</span><img class="box-image" src="images/arrow.png"></img>
+				    </a>
+				</li>
+				<li>
+					<a href="#"><div class="box">
+					<span>Weddings</span><img class="box-image" src="images/arrow.png"></img>
 					</div></a>
 				</li>
 				<li>
-					<a href="#"><div class="rcorners">
-					<p>Weddings</p><img class="rcorners-img" src="images/arrow.png"></img>
-					</div></a>
-				</li>
-				<li>
-					<a href="#"><div class="rcorners">
-					<p>Corporates</p><img class="rcorners-img" src="images/arrow.png"></img>
+					<a href="#"><div class="box">
+					<span>Corporates</span><img class="box-image" src="images/arrow.png"></img>
 					</div></a>
 				</li>
 				<li class="nomargin">
-					<a href="#"><div class="rcorners">
-					<p>Sahas</p><img class="rcorners-img" src="images/arrow.png"></img>
+					<a href="#"><div class="box">
+					<span>Sahas</span><img class="box-image" src="images/arrow.png"></img>
 					</div></a>
 				</li> 
 			</ul>
