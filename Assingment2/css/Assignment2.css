@@ -4,10 +4,19 @@ body, html,h3 {
   padding: 0;
 }
 
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 header{
 	background-color: #000;
-
 }
+header .container{
+	height: 50px;
+}
+
  .logo h3{
 	text-align: center;
 	padding-top: 5px;
@@ -35,7 +44,9 @@ header{
 	float: left;
 	margin-right: 50px;
 }
-
+/*header ul {
+	float: left;
+}*/
 header a{
 	color: #aaaaaa;
 	text-decoration: none;
@@ -47,8 +58,10 @@ header a{
 .clear{
 	clear: both;
 	float: none;
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
+	width: 0;
+	height: 0;
 }
 
 .banner{
@@ -65,8 +78,8 @@ header a{
 	font-size: 36px;
   	font-family: sans-serif;
     color: #444444;
-  	margin-bottom: 70px;  	
-    margin-top: 0px;
+    margin: 0 0 70px 0;
+
 }
 
 
