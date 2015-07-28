@@ -38,7 +38,8 @@ ul{
 .h-list li a{
    /* When we use display inline never use float : left they are the same*/
 	float: left;
-	padding: 20px 0 0 30px;
+	padding: 20px 0 20px 0;
+    margin: 0 20px;
 	text-decoration: none;
 	font-size: 16px;
 	color: #000;
